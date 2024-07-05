@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parkinson's Disease Detection</title>
+</head>
+<body>
+    <h1>Parkinson's Disease Detection</h1>
+    <form action="/predict" method="post">
+        <div>
+            <label for="mdvp_fo">MDVP:Fo(Hz)</label>
+            <input type="text" name="mdvp_fo" id="mdvp_fo" required>
+        </div>
+        <div>
+            <label for="mdvp_fhi">MDVP:Fhi(Hz)</label>
+            <input type="text" name="mdvp_fhi" id="mdvp_fhi" required>
+        </div>
+        <div>
+            <label for="mdvp_flo">MDVP:Flo(Hz)</label>
+            <input type="text" name="mdvp_flo" id="mdvp_flo" required>
+        </div>
+        <div>
+            <label for="mdvp_jitter_percent">MDVP:Jitter(%)</label>
+            <input type="text" name="mdvp_jitter_percent" id="mdvp_jitter_percent" required>
+        </div>
+        <div>
+            <label for="mdvp_jitter_abs">MDVP:Jitter(Abs)</label>
+            <input type="text" name="mdvp_jitter_abs" id="mdvp_jitter_abs" required>
+        </div>
+        <div>
+            <label for="mdvp_rap">MDVP:RAP</label>
+            <input type="text" name="mdvp_rap" id="mdvp_rap" required>
+        </div>
+        <div>
+            <label for="mdvp_ppq">MDVP:PPQ</label>
+            <input type="text" name="mdvp_ppq" id="mdvp_ppq" required>
+        </div>
+        <div>
+            <label for="jitter_ddp">Jitter:DDP</label>
+            <input type="text" name="jitter_ddp" id="jitter_ddp" required>
+        </div>
+        <div>
+            <label for="mdvp_shimmer">MDVP:Shimmer</label>
+            <input type="text" name="mdvp_shimmer" id="mdvp_shimmer" required>
+        </div>
+        <!-- Add more input fields for other features as needed -->
+        <button type="submit">Predict</button>
+    </form>
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
